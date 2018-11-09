@@ -14,6 +14,11 @@ app.get('/favoriteteam/:favteam', (req, res) => {
     res.render("love.ejs", {favteam: favteam});
 });
 
+app.get('/rivalteam/:rivalteam', (req, res) => {
+    let rivalteam = req.params.rivalteam;
+    res.render("rival.ejs", {rivalteam: rivalteam});
+});
+
 app.get('/about', (req, res) => res.json({Success: 'Welcome to the about us page'}))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`hello Erin ${port}!`))
